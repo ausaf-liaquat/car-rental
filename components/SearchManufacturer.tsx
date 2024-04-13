@@ -22,7 +22,7 @@ const SearchManufacturer = ({
 
   return (
     <div className="search-manufacturer">
-      <Combobox>
+      <Combobox value={manufacturer} onChange={setManufacturer}>
         <div className="relative w-full">
           <Combobox.Button className="absolute top-[14px]">
             <Image
@@ -58,7 +58,7 @@ const SearchManufacturer = ({
                   value={item}
                 >
                   {({ selected, active }) => (
-                    <>
+                    <div>
                       <span
                         className={`block truncate ${
                           selected ? "font-medium" : "font-normal"
@@ -73,7 +73,7 @@ const SearchManufacturer = ({
                           }`}
                         ></span>
                       ) : null}
-                    </>
+                    </div>
                   )}
                 </Combobox.Option>
               ))}
